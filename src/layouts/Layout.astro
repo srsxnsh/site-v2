@@ -15,13 +15,15 @@ import '../styles/global.css'
 
 
   <body>
+    <div class='wrapper'>
       <Header />
       <main id = "content">
-        <div if='content'>  
+        <div>  
           <slot />
         </div>
       </main>        
       <Footer />
+    </div>
   </body>
 
 </html>
