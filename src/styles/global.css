@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  body {
+    @apply bg-gray-900 text-white font-mono m-0;
+  }
+
+  h1 { @apply text-4xl font-bold mb-4; }
+  h2 { @apply text-2xl mb-2; }
+  p  { @apply mb-4; }
+}
+
