@@ -1,15 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html, body {
 
-@layer base {
-
-  body {
-    @apply bg-gray-900 text-white font-mono m-0;
-  }
-
-  h1 { @apply text-4xl font-bold mb-4; }
-  h2 { @apply text-2xl mb-2; }
-  p  { @apply mb-4; }
+  margin: 50;
+  height:100%;
 }
+
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  justify-content:center;
+}
+
+.content {
+ width:400px;
+ padding:20px;
+}
+
 
