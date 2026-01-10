@@ -26,6 +26,14 @@ body {
 
 }
 
+.wrapper hr {
+  width: 100%;
+  align-self: stretch;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+
 header {
   margin:0;
 }
