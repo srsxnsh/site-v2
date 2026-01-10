@@ -1,0 +1,40 @@
+---
+interface Props {
+  src: string;
+  title?: string;
+  href: string;
+}
+
+const { src, title = "", href } = Astro.props;
+---
+
+<a
+  class="Badge"
+  href={href}
+  title={title}
+>
+  <img src={src} alt={title} />
+</a>
+
+<style>
+  .Badge {
+    min-width: max(88px, 6.5rem);
+    height: max(31px, 2.3rem);
+    border: none !important;
+    display: inline-block;
+    font-size: 0;
+    text-decoration: none;
+  }
+
+  .Badge::after {
+    display: none;
+  }
+
+  .Badge img {
+    image-rendering: pixelated;
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+</style>
+
