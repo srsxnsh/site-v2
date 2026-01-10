@@ -18,13 +18,24 @@ body {
 .wrapper {
 
   padding:40px;
-  width:500px;
+  width:527px;
   box-sizing:border-box;
   display:flex;
   flex-direction:column;
   gap:20px;
 
 }
+
+.badges {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+
 
 .wrapper hr {
   width: 100%;
