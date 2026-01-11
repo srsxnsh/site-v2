@@ -1,1 +1,1 @@
-i broke tailwind install on the old one and then messed up a load of git stuff lol
+A personal website. V2, because the old one sucked.

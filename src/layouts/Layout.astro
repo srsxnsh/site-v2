@@ -1,13 +1,15 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/global.css'
+import Badges from '../components/Badges.astro';
+import '../styles/global.css';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 		<meta name="viewport" content="width=device-width resizes-content initial-scale=1.0" /> 
     <meta name="description" content="cool ass site smh">
 		<title>srsxnsh</title>
@@ -15,13 +17,26 @@ import '../styles/global.css'
 
 
   <body>
+    <div class='wrapper'>
       <Header />
+      <hr />
+
       <main id = "content">
-        <div if='content'>  
+        
+        <div>
+          <p style='font-size:xxx-large;'> srsxnsh. </p>
+
           <slot />
+
         </div>
-      </main>        
+
+      </main>
+      <br />
+      <hr />
+      <Badges />
+
       <Footer />
+    </div>
   </body>
 
 </html>
