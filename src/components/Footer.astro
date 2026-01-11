@@ -11,15 +11,19 @@ const res = await fetch(
   `https://api.github.com/repos/${OWNER}/${REPO}/commits/${BRANCH}`,
   {
     headers: {
-      "Accept": "application/vnd.github+json",
+    Accept: "application/vnd.github+json",
     },
   }
 );
 
 const data = await res.json();
 
-const commitURL = data.html_url;
-const sha = data.sha.substring(0, 7);
+if (!res.ok) {
+  console.error("GitHub API error:", data);
+}
+
+const commitURL = data?.html_url ?? "#";
+const sha = data?.sha?.slice(0, 7) ?? "??????? - GitHub API Failure";
 
 
 ---
