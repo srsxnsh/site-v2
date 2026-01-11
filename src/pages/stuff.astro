@@ -5,33 +5,81 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
   <p style='font-size:xx-large;'>stuff. </p>
   <p>
-  stuff page 
+  This is a page for documenting all my projects, and other things i own, in varying levels of detail. 
   </p>
+  <p style='font-size:small;color:LightGrey;'>
+  [Eventually this will be updated with links to all hardware, software, and docker images listed.]
+  </p>
+
 
   <details>
     <summary>Projects </summary>
-    <p style='font-size:medium;'> 
-      projects
+
+    <p> 
+    A few projects of mine (not exhautive) are:
     </p>
+
+    <ul>
+      <li>A customizable and personalized GD Demonlist using the GDDL API. 
+        <a href='https://github.com/srsxnsh/demonlist' target='_blank'>[Github]</a>
+      </li>
+
+      <li>An OS shell written in C.</li>
+
+      <li>This site, written with astro and css.
+        <a href='https://github/com/srsxnsh/site-v2' target='_blank'>[Github]</a>
+      </li>
+
+      <li>A rain world mod.</li>
+      <li>Various CLI tools written in bash </li>
+      <li>A C algorithm for Seat Racing.</li>
+
+    </ul>
   </details>
 
   <details>
     <summary>Hardware </summary>
-    <p style='font-size:medium;'> 
-
-    </p>
+    <p>My PC is running on a 7700x + 6600xt, with 32gbDDR5 and 3tb of storage.
+    <br />I use a £20 Anker vertical mouse and a Keychron K2. I have a 32" 1440p Samsung Odyssey monitor (I like the real estate it gives me). 
+    <br><br>I also own an old Lenovo laptop, the model of which I cannot recall as they are not produced anymore. It's great for doing work and light gaming when I dont feel like sitting at my desk.
+    <br>I talk more about other hadware I own in the Homelab section of this page.</p>
   </details>
 
   <details>
     <summary>Software </summary>
     <p style='font-size:medium;'> 
-
+    Both my laptop and desktop use arch + hyprland. Info on what i run on them can be found below:
     </p>
+    <ul>
+      <li>Terminal (This is where I do most of my work): Ghostty</li>
+      <li>Editor: Neovim, of course.</li>
+      <li>File Manager: Ranger. It's a really cool tui manager with vim motions.</li>
+      <li>Browser: Vivaldi <3</li>
+      <li>IRC: I use the irssi client, connected to my personal ZNC server (more info in #Homelab).</li>
+      <li>Localsend! An amazing foss airdrop alternative.</li>
+    </ul>
   </details>
 
   <details>
     <summary>Homelab </summary>
-    <p style='font-size:medium;'> 
+    <p> 
+      I have a rack with all my networking equipment and my servers [Rackmate T1].
+      <br />I have a repurposed Wyse 5020 (perfect for a DNS and VPN, the latter I am yet to set up),
+      and my main server, 'Vespasian', is an HP elitedesk 800G3 mini running all my docker containers.
+      <br /><br />
+      Below is a list of all the services being hosted on my servers:
+
+      <ul>
+        <li>A PiHole DNS. </li>
+        <li>My ZNC server, connected to Libera</li>
+        <li>My Jellyfin media server.</li>
+        <li>Uptime Kuma. </li>
+        <li>A few Minecraft Servers. </li>
+        <li>Prometheus for monitoring and sending data to: </li>
+        <li>Grafana, a metrics dashboard. </li>
+        <li>DocuWiki, for documenting my network. </li>
+        <li>HedgeDoc, for writing. </li>
+      </ul>
 
     </p>
   </details>

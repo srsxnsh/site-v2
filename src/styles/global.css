@@ -3,7 +3,7 @@ body {
   margin: 20px;
   height:100%; 
   font-family: monospace;
-  font-size: large;
+  font-size: medium;
   
   align-items: center;
   background-color: black;
@@ -81,4 +81,8 @@ a:hover {
 
 a:active {
   color: white;
+}
+
+summary {
+  font-size:large;
 }
