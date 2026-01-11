@@ -86,3 +86,15 @@ a:active {
 summary {
   font-size:large;
 }
+
+.rainbow {
+
+    background: linear-gradient(
+        90deg,
+        red, orange, yellow, green, cyan, blue, violet, red
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
