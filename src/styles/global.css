@@ -18,11 +18,14 @@ body {
 .wrapper {
 
   padding:40px;
-  width:527px;
+  width:528px;
   box-sizing:border-box;
   display:flex;
   flex-direction:column;
   gap:20px;
+  border-style:solid;
+  border-color:DarkGray;
+  background-color:Black;
 
 }
 
@@ -50,23 +53,11 @@ header {
 }
 
 footer {
-  margin-top: auto;
-  padding: 1rem;
-  background-color: black;
-  position: fixed;
-  bottom:0;
-  left:0;
-  text-align:center;
-  width:100%;
-
-  font-size: medium;
+ margin:0;
+ padding:0;
+ border: solid DarkGray;
+ text-align:center;
 }
-
-.content {
- width:400px;
- padding:20px;
-}
-
 
 a{
   color: LightGray;
@@ -85,4 +76,10 @@ a:active {
 
 summary {
   font-size:large;
+}
+
+#bg {
+  position:fixed;
+  inset:0;
+  z-index:-1;
 }

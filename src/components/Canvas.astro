@@ -1,0 +1,84 @@
+<canvas id="bg"></canvas>
+
+<script is:inline>
+  if (typeof window !== "undefined") {
+    const canvas = document.getElementById("bg");
+    const ctx = canvas.getContext("2d");
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener("resize", resize);
+    resize();
+
+    const GRID_SIZE = Math.random() * 30 + 22;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    const scrollSpeedX = Math.random() * 2 - 1;
+    const scrollSpeedY = Math.random() * 2 - 1;
+
+    const mouse = { x: null, y: null };
+
+    window.addEventListener("mousemove", e => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    window.addEventListener("mouseleave", () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    function drawGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.strokeStyle = "#1a1a1a";
+      ctx.lineWidth = 1;
+
+      const cols = Math.ceil(canvas.width / GRID_SIZE) + 2;
+      const rows = Math.ceil(canvas.height / GRID_SIZE) + 2;
+
+      const startX = -((offsetX % GRID_SIZE + GRID_SIZE) % GRID_SIZE);
+      const startY = -((offsetY % GRID_SIZE + GRID_SIZE) % GRID_SIZE);
+
+      for (let x = 0; x < cols; x++) {
+        for (let y = 0; y < rows; y++) {
+          ctx.strokeRect(
+            startX + x * GRID_SIZE,
+            startY + y * GRID_SIZE,
+            GRID_SIZE,
+            GRID_SIZE
+          );
+        }
+      }
+    }
+
+    function highlightCell() {
+      if (mouse.x === null) return;
+
+      const gx =
+        Math.floor((mouse.x + offsetX) / GRID_SIZE) * GRID_SIZE - offsetX;
+      const gy =
+        Math.floor((mouse.y + offsetY) / GRID_SIZE) * GRID_SIZE - offsetY;
+
+      ctx.fillStyle = "rgba(255,255,255,0.06)";
+      ctx.fillRect(gx, gy, GRID_SIZE, GRID_SIZE);
+    }
+
+    function animate() {
+      offsetX += scrollSpeedX;
+      offsetY += scrollSpeedY;
+
+      drawGrid();
+      highlightCell();
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  }
+</script>
+
