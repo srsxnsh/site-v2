@@ -197,6 +197,7 @@ const pagering: PageringMember[] = await pageringRes.json();
 <a href="https://pagering.gideon.sh" target="_blank">page_ring</a> webring.
 
 </p>
+<pagering-link theme="dark" style="margin-top: 8px"></pagering-link>
 <div>
     {pagering.map(member => (
     <Badge
@@ -207,7 +208,7 @@ const pagering: PageringMember[] = await pageringRes.json();
     ))}
 </div>
 
-
+<script src="https://pagering.gideon.sh/embed.js" defer></script>
 
 
 
