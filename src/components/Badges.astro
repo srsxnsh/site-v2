@@ -2,14 +2,27 @@
 import Badge from '../components/Badge.astro';
 
 
-type Member = {
+type PlaceholderMember = {
   name: string;
   website: string;
   img: string;
 };
 
-const res = await fetch("https://webring.phthallo.com/api/members");
-const members: Member[] = await res.json();
+type PageringMember = {
+  id: string;
+  name: string;
+  url: string;
+  redirectUrl: string;
+  buttonUrl: string;
+};
+
+const [placeholderRes, pageringRes] = await Promise.all([
+  fetch("https://webring.phthallo.com/api/members"),
+  fetch("https://pagering.gideon.sh/api/v1/members"),
+]);
+
+const placeholder: PlaceholderMember[] = await placeholderRes.json();
+const pagering: PageringMember[] = await pageringRes.json();
 ---
 
 
@@ -159,11 +172,6 @@ const members: Member[] = await res.json();
     href="/"
   />
 
-  <Badge
-      href="https://bomberfish.ca"
-      title='bomberfish'
-    src="https://bomberfish.ca/button.gif"
-  />
 
   
   
@@ -175,7 +183,7 @@ const members: Member[] = await res.json();
   </p>
 
   <div>
-  {members.map((member) => (
+  {placeholder.map((member) => (
     <Badge
       href={member.website}
       title={member.name}
@@ -183,6 +191,17 @@ const members: Member[] = await res.json();
     />
   ))}
 </div>
-
-
-
+  
+<hr />
+<p style='color:DarkGray;'>
+page_ring webring.
+</p>
+<div>
+    {pagering.map(member => (
+    <Badge
+      name={member.name}
+      href={member.redirectUrl ?? member.url}
+      src={member.buttonUrl}
+    />
+    ))}
+</div>
