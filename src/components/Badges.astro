@@ -1,5 +1,15 @@
 ---
 import Badge from '../components/Badge.astro';
+
+
+type Member = {
+  name: string;
+  website: string;
+  img: string;
+};
+
+const res = await fetch("https://webring.phthallo.com/api/members");
+const members: Member[] = await res.json();
 ---
 
 
@@ -157,4 +167,22 @@ import Badge from '../components/Badge.astro';
 
   
   
-  </div>
+</div>
+
+  <hr />
+  <p style='color:DarkGray;'>
+  <a href='https://webring.phthallo.com'>Placeholder</a> webring.
+  </p>
+
+  <div>
+  {members.map((member) => (
+    <Badge
+      href={member.website}
+      title={member.name}
+      src={member.img}
+    />
+  ))}
+</div>
+
+
+
