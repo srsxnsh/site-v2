@@ -196,9 +196,6 @@ const pagering: PageringMember[] = await pageringRes.json();
 <p style='color:DarkGray;'>
 <a href="https://pagering.gideon.sh" target="_blank">page_ring</a> webring.
 
-<a href="#" id="runPagering">[enter webring]</a>
-
-
 </p>
 <div>
     {pagering.map(member => (
@@ -210,29 +207,8 @@ const pagering: PageringMember[] = await pageringRes.json();
     ))}
 </div>
 
+<script src="https://pagering.gideon.sh/embed.js" defer></script>
 
 
-<script>
-document.getElementById("runPagering").addEventListener("click", function(event) {
-    event.preventDefault(); 
 
-    if (!document.getElementById("pageringScript")) {
-        
-        const script = document.createElement("script");
-        script.src = "https://pagering.gideon.sh/embed.js";
-        script.id = "pageringScript";
-        script.defer = true;
-
-        
-        script.onload = function() {
-            console.log("ker-chunk ~~mag~~ script loaded");
-                   };
-
-      
-        document.body.appendChild(script);
-    } else {
-      console.log("if your supply chain fails youre fucked - sun tzu, the art of war");
-    }
-});
-</script>
 
