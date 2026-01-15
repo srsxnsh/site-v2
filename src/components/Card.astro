@@ -10,7 +10,7 @@ const { img, title = "", desc, href } = Astro.props;
 ---
 
 <div class="Card">
-  <img src={img} alt={title}/>
+  <img src={img} alt={title} style='display:flex;justify-content:center;'/>
   <p style="font-size: x-large;">
   <a href={href}>{title}</a>
   </p>
@@ -21,7 +21,6 @@ const { img, title = "", desc, href } = Astro.props;
 
 <style>
   .Card{
-    align:center;
     background-color:black;
     border-style:solid;
     border-color:DarkGray;
