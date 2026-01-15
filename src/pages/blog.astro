@@ -1,11 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 ---
 
 <Layout>
   <p style='font-size:xx-large;'>blog. </p>
   <p>This page is under construction. I will be building a custom rss / atom feed here in the future. </p>
-  <p>
+  <br />
+  <div id='cards'>
+
+  <Card
+      img='/badges/srsxnsh.gif'
+      title='Hello, World!'
+      desc='firstpost'
+      href='/posts/hello-world'
+  />
   
+  </div>
+  <br />
+  <p style='text-align:center;color:DarkGray;'>The end is 
+  <a href='https://youtu.be/UQByi9IHiZo?si=4yU-XXM-s_TksCIP' target='_blank'>here</a>.
   </p>
+
 </Layout>
