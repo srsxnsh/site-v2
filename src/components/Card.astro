@@ -1,0 +1,31 @@
+---
+interface Props {
+  img: string;
+  title?: string;
+  desc: string;
+  href: string;
+}
+
+const { img, title = "", desc, href } = Astro.props;
+---
+
+<div class="Card">
+  <img src={img} alt={title}/>
+  <p style="font-size: x-large;">
+  <a href={href}>{title}</a>
+  </p>
+  <p>{desc}</p>
+
+
+</div>
+
+<style>
+  .Card{
+    align:center;
+    background-color:black;
+    border-style:solid;
+    border-color:DarkGray;
+    padding:20px;
+  }
+</style>
+
