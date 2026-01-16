@@ -1,7 +1,8 @@
 -/- make random splash clientside instead of decided on build
 -/- add a cool custom background
 -/- add webring
-- better mobile support
-- add a favicon
-- rss blog
+-/- better mobile support
+--- add a favicon
+-/- blog
+--- blog posts
 
