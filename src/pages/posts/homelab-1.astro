@@ -1,0 +1,71 @@
+---
+import Layout from '../../layouts/Bloglayout.astro';
+const title = 'Homelab Update 1';
+const description = 'A short tour of my current setup.';
+const postdate = '17/01/2026';
+const image = '/blog/rack.jpg';
+---
+<Layout>
+
+  <p style='font-size:xxx-large;'>{title}</p>
+  <p style='color:DarkGrey;'>{postdate}</p>
+  <p style='font-size:large;'>{description}</p>
+
+  <p>I think it was probably in October last year that I actually started messing around with homelabbing and selfhosting. I started on an old laptop running headless Debian.
+  The laptop itself has been retired from this cause (for something with a bit more compute!), but
+  my setup has grown quite a bit since then.</p>
+
+    <img alt='My 10" rack setup.'src={image}>
+
+
+  <p style='font-size:x-large;'>
+  The PiHole</p>
+
+  <p>
+  You can actually find old thin clients on ebay for really cheap, this is a Wyse 5020 (iirc)
+  that I got for 20 GBP. I lovingly refer to it as 'The PiHole', because, well...
+  thats what it runs. <br /><br />
+  The server is running headless Debian, and I use it as my DNS, providing network-wide adblock
+  and request monitoring. It still has about 3/4 of it's 12GB SSD left, and I will probably use it to run a VPN and a firewall in the future.
+  </p>
+
+  <p style='font-size:x-large;'>
+  Vespasian</p>
+
+  <p>
+  Vespasian is the better specced of my two servers. It is an old EliteDesk mini and has a 500GB SSD with 8GB RAM (rather than
+  The PiHole's meagre two), and runs minimal Arch, which may seem an odd choice, but it is very lightweight.
+  <br /><br />
+  Vespasian is the server on which I run all my docker containers.
+  <br /> It is currently hosting:
+  <ul>
+    <li>Portainer for docker management.</li>
+    <li>Prometheus and Grafana for hardware monitoring. You can find my setup 
+      <a href='https://github.com/srsxnsh/grafana-with-prometheus' target='_blank'>[here]</a>.</li>
+    <li>Uptime Kuma, for status monitoring, also linked to Node Exporter so i can
+     see the data in grafana.</li>
+    <li>DokuWiki, for documenting my setup in detail incase I ever forget any IPs, 
+      port numbers, or docker images.</li>
+    <li>A few minecraft servers to start if needed.</li>
+    <li>My ZNC server for IRC, connected to the Libera IRC network.</li>
+    <li>My jellyfin media server for my photos, music, and more.</li>
+
+  </ul>
+  </p>
+
+  <p style='font-size:x-large;'>
+  Networking / The Rack</p>
+
+  <p>
+  To bring the entire setup together, I have it all held in the DeskPi Rackmate T1, with a 
+  GigaBit 8-port switch. I have just about enough space in there for another server, or two, 
+  and a k3s cluster if i ever collect enough rPis. <br />
+  </p>
+
+
+
+
+  <p><br />Vale.</p>
+
+
+</Layout>

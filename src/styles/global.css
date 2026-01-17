@@ -29,6 +29,12 @@ body {
 
 }
 
+.wrapper img {
+  max-width:100%;
+  height:auto;
+
+}
+
 .badges {
 
   display: flex;
