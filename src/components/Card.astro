@@ -4,9 +4,10 @@ interface Props {
   title?: string;
   desc: string;
   href: string;
+  ddmmyyyy: string;
 }
 
-const { img, title = "", desc, href } = Astro.props;
+const { img, title = "", desc, href, ddmmyyyy } = Astro.props;
 ---
 
 <div class="Card">
@@ -15,6 +16,7 @@ const { img, title = "", desc, href } = Astro.props;
   <a href={href}>{title}</a>
   </p>
   <p>{desc}</p>
+  <p style='color:DarkGray'>{ddmmyyyy}</p>
 
 
 </div>
