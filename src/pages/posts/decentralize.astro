@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Bloglayout.astro';
+const title = 'Overcentralization';
+const description = 'Bronze age Greece, life, and the internet.';
+const postdate = '15/01/2026';
+const image = '/blog/mycenae.jpg';
+---
+<Layout>
+
+  <p style='font-size:xxx-large;'>{title}</p>
+  <p style='color:DarkGrey;'>{postdate}</p>
+  <img src={image}>
+  <p style='font-size:large;'>Mycenae</p>
+
+  <p>In the height of Bronze age Greece, the economy was structured into a <i>
+    palatial</i> system involving all trade and goods moving through massive "Palaces", 
+  vast fortified citadels at the center of each region.</p>
+  <p>The farmers would farm the crops, the smiths would smith the metal, the leatherworkers
+  would work the leather. All of these goods would be taken into the citadel, sorted,
+  and distributed amongst the people, with the excess being stored or traded off.
+  <br />
+  In this way, everyone got what they needed in the right amounts, provided they were 
+  also contributing to the economy.
+  </p>
+  <p>The greatest and probably most famous of these palaces was <b>Mycenae</b>.
+  It was situated about 150 km south west of Athens (which was at the time much unlike
+  its state in the Golden Age [~5BCE], and was at this point a rather small town), and was
+  most notably ruled by the (cursed) line of Atreus.
+  </p>
+  <p>Now, during the 12th century BCE, these Palaces experienced a phenomenon
+  known as the <b>Post Bronze-age Collapse</b>. The exact causes of this widespread event
+  are speculated upon to this day (there are over 20 possible theories), but the gist of it
+  is that some event, likely a natural disaster or famine or combination of many <i>other</i> things
+  happenned, and the economy across the entirety of Greece collapsed completely.
+  </p>
+  <p>Whatever happenned, it caused the few Palaces spread out across Greece to stop operating.
+  </p>
+  <p>As a result of the vast overcentralization present in the palatial system, everything went down when the 
+  citadels fell.
+  </p> <br />
+  <hr /> <br />
+  <img src={"/blog/shork.jpg"}>
+
+  <p style='font-size:large;'>The Internet</p>
+  <p>You remember that time a couple months ago when Cloudflare went down and so did half of the internet
+  that runs on it? What about that time when AWS shat itself for a day or so and took down the <i>other</i> half?
+  I'm being ambiguous with the times because, well, this sort of thing literally can happen at any time.
+  If some bad code gets pushed to prod, or power goes out and your 5 UPSs broke, or some shark decides
+  that fibre optic looks tasty and cuts some random island off from the internet, vast numbers of services 
+  integral to the operation of the world can just... go.</p>
+  <p>Reminding you of Mycenae yet?</p>
+  <p>What if I reiterate the idea of everything having to go through the center and come back out again.
+  </p>
+  <p>More than just generally, this is about you and I. If your router breaks, there's a leak right by the switch down the road,
+  or a squirrel decides to gnaw into your line... Over.
+  No more access to your backups, no more Minecraft server, no more Wikipedia, nothing but what you have right there in your house. 
+  
+  <p style='font-size:large;'>Decentralization<p>
+  <p>So why not put it in your house?
+  </p>
+  <p>You can buy some pretty solid "ewaste" on ebay for well under 100$. An old mini PC, small server,
+  or some rPis. Add in a few cables and a switch, that's a pretty solid foundation for a home server.
+  <p>Then build. Add jellyfin, immich, truenas. Host your <i>own</i> Minecraft servers. Expand- proxmox,
+  docker, kubernetes. The entirety of wikipedia is under 100GB. You can get 100GB for 15$.
+  That's 15$ for the entirety of human knowledge. Or even for free, just host it on whatever you're reading this on.
+  </p>
+  <p>And once you have all that, who needed the internet anyway?</p>
+  <br />
+
+  <p>Vale.</p>
+
+
+</Layout>
